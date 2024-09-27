@@ -1,0 +1,13 @@
+[Unit]
+Description=Radio_on_boot
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/bash /home/pi/scripts/radio_on_boot.sh
+Type=oneshot
+SyslogIdentifier=radio_on_boot
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

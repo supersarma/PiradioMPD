@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/scripts/changer_station.py
+WorkingDirectory=/home/pi/scripts/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=RADIO_Button_Changement_Station
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

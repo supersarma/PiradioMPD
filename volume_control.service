@@ -1,0 +1,12 @@
+[Service] 
+ExecStart=/usr/bin/python /home/pi/scripts/volume.py
+WorkingDirectory=/home/pi/scripts/
+Restart=always 
+StandardOutput=syslog 
+StandardError=syslog 
+SyslogIdentifier=volume_control 
+User=root 
+Group=root
+
+[Install] 
+WantedBy=multi-user.target
